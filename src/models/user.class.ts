@@ -15,4 +15,15 @@ export class User {
     this.zipCode = obj ? obj.firstName : ''; //if obj excist? else empty string
     this.city = obj ? obj.firstName : ''; //if obj excist? else empty string
   }
+
+  public toJSON() {
+    return {
+     firstName: this.firstName,
+     lastName: this.lastName,
+     birthDate: this.birthDate,
+     street: this.street,
+     zipCode: this.zipCode,
+     city: this.city
+    };
+  }
 }

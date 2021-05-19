@@ -18,6 +18,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatNativeDateModule,
     MatDatepickerModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
