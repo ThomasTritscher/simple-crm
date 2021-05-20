@@ -7,12 +7,13 @@ export const environment = {
   firebase: {
     apiKey: "AIzaSyBmS7rKSgPr6lP-GogAXiSjCsIub7fztxM",
     authDomain: "simple-crm-f8f97.firebaseapp.com",
-    databaseURL: '<your-database-URL>',
+    databaseURL: "https://simple-crm-f8f97-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "simple-crm-f8f97",
     storageBucket: "simple-crm-f8f97.appspot.com",
     messagingSenderId: "330454433110",
     appId: "1:330454433110:web:8c08672cb34b842585aaf7",
     measurementId: '<your-measurement-id>'
+    
   }
 };
 
