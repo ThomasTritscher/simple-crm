@@ -12,6 +12,7 @@ export class UserDetailComponent implements OnInit {
 
   userId = '';
   user: User = new User();
+  
 
   constructor(private route: ActivatedRoute, private firestore: AngularFirestore) { }
 
@@ -32,6 +33,12 @@ export class UserDetailComponent implements OnInit {
       this.user = new User(user);//Json switch into Obj typ User
       console.log('Retrieved User', this.user)
     });
+  }
+  editUserDetail(){
+    
+  }
+  editMenu(){
+
   }
 
 }

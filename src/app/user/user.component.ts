@@ -11,11 +11,12 @@ import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.compo
 })
 export class UserComponent implements OnInit {
 
-  constructor(public dialog: MatDialog, private firestore: AngularFirestore) { }
 
-  user = new User(); // var : data typ = created instance / similar to empty Json
-  allUsers: any  = [];
-  
+
+  user = new User(); // var : data typ = created instance / same to empty Json
+  allUsers: any = [];
+
+  constructor(public dialog: MatDialog, private firestore: AngularFirestore) { }
 
 
   ngOnInit(): void {
