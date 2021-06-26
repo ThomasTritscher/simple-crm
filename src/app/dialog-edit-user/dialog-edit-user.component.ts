@@ -11,7 +11,7 @@ import { User } from 'src/models/user.class';
 export class DialogEditUserComponent implements OnInit {
 
   loading = false;
-  user!: User;
+  user: User = new User();
   userId!: string;
 
 
@@ -21,15 +21,19 @@ export class DialogEditUserComponent implements OnInit {
   }
 
   saveUser() {
-    this.loading = true;
-    this.firestore
-    .collection('users')
-    .doc(this.userId)
-    .update(this.user.toJSON())
-    .then(() => {
-      this.loading = false;
-      this.dialogRef.close();
-    })
+    if (this.userId) {
+      this.loading = true;
+      this.firestore
+        .collection('users')
+        .doc(this.userId)
+        .update(this.user.toJSON())
+        .then(() => {
+          this.loading = false;
+          this.dialogRef.close();
+        });
+    }else{
+      //Throw Error
+    }
 
   }
 

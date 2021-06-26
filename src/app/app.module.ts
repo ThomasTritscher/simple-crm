@@ -27,6 +27,13 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
+import { TasksComponent } from './tasks/tasks.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { MessagesComponent } from './messages/messages.component';
+
+
 
 @NgModule({
   declarations: [
@@ -36,7 +43,9 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
     DialogAddUserComponent,
     UserDetailComponent,
     DialogEditAddressComponent,
-    DialogEditUserComponent
+    DialogEditUserComponent,
+    TasksComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +66,11 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
     AngularFirestoreModule,
     MatProgressBarModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatGridListModule,
+    MatDividerModule,
+    MatListModule
+     
     
   ],
   providers: [],
