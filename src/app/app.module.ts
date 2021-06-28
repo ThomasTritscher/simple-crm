@@ -35,6 +35,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { LoginComponent } from './login/login.component';
 import { AuthenticationService } from './services/authentication.service';
 import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -52,6 +53,7 @@ import { HomeComponent } from './home/home.component';
     MessagesComponent,
     LoginComponent,
     HomeComponent,
+    RegisterComponent,
 
   ],
   imports: [

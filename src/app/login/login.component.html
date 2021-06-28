@@ -23,36 +23,6 @@
                 <a class="ml10"> Registriere Dich</a>
             </span>
         </form>
-
-    </div>
-
-    <div *ngIf="!isSignedIn" class="registerForm">
-        <form class="form">
-            <h2>Registrierung</h2>
-            <mat-form-field class="example-full-width">
-                <mat-label>
-                    <mat-icon>mail</mat-icon> Email bestätigung
-                </mat-label>
-                <input #emailRegister name="email" type="email" matInput>
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-                <mat-label>
-                    <mat-icon>lock</mat-icon> Passwort
-                </mat-label>
-                <input #passwordRegister name="password" minlength="8" type="password" matInput>
-            </mat-form-field>
-            <mat-form-field class="example-full-width mb20">
-                <mat-label>
-                    <mat-icon>lock</mat-icon> Passwort bestätigung
-                </mat-label>
-                <input name="passwordAuth" minlength="8" type="password" matInput>
-            </mat-form-field>
-            <mat-error style="margin-bottom: 20px;">beide Passwörter müssen übereinstimmen
-            </mat-error>
-            <button type="submit" mat-raised-button color="accent"
-                (click)="onRegister(emailRegister.value,passwordRegister.value)">Registrieren</button>
-            <button mat-button>Doch schon dabei ?</button>
-        </form>
     </div>
     <app-home *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-home>
 </div>
