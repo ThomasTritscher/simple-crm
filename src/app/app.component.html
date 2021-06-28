@@ -4,31 +4,28 @@
       <img src="/assets/img/logo.png" alt="">
       <span>Simple CRM</span>
     </div>
-
     <ul>
-      <li routerLink="/" routerLinkActive="router-link-active"><mat-icon>fact_check</mat-icon>Dashboard</li>
-      <li routerLink="/user" routerLinkActive="router-link-active"><mat-icon>perm_identity</mat-icon>User</li>
+      <li routerLink="/" routerLinkActive="router-link-active">
+        <mat-icon>fact_check</mat-icon>Dashboard
+      </li>
+      <li routerLink="/user" routerLinkActive="router-link-active">
+        <mat-icon>perm_identity</mat-icon>User
+      </li>
     </ul>
-
-
-
   </mat-drawer>
-
   <div class="example-sidenav-content">
-
     <mat-toolbar color="primary">
-      <mat-toolbar-row>
+      <mat-toolbar-row class="toolbar-row">
         <mat-icon class="menu-icon" mat-button (click)="drawer.toggle()">menu</mat-icon>
         <span>Simple CRM</span>
+        <div class="user-container">
+          Login
+          <mat-icon (click)="openDialog()" class="user-icon">account_circle</mat-icon>
+        </div>
       </mat-toolbar-row>
     </mat-toolbar>
-<div class="router-container">
-  <router-outlet></router-outlet>
-
-</div>
-    
-
-
+    <div class="router-container">
+      <router-outlet></router-outlet>
+    </div>
   </div>
-
 </mat-drawer-container>
