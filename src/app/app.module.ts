@@ -33,6 +33,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MessagesComponent } from './messages/messages.component';
 import { LoginComponent } from './login/login.component';
+import { AuthenticationService } from './services/authentication.service';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -49,6 +51,7 @@ import { LoginComponent } from './login/login.component';
     TasksComponent,
     MessagesComponent,
     LoginComponent,
+    HomeComponent,
 
   ],
   imports: [
@@ -78,7 +81,7 @@ import { LoginComponent } from './login/login.component';
 
 
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
