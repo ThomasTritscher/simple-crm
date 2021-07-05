@@ -17,7 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -36,6 +36,11 @@ import { LoginComponent } from './login/login.component';
 import { AuthenticationService } from './services/authentication.service';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { ActivityComponent } from './activity/activity.component';
+import { CashFlowComponent } from './cash-flow/cash-flow.component';
+import { ContractsComponent } from './contracts/contracts.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatChipsModule } from '@angular/material/chips';
 
 
 
@@ -54,6 +59,10 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
+    ActivityComponent,
+    CashFlowComponent,
+    ContractsComponent,
+
 
   ],
   imports: [
@@ -79,7 +88,11 @@ import { RegisterComponent } from './register/register.component';
     MatGridListModule,
     MatDividerModule,
     MatListModule,
-   
+    ReactiveFormsModule,
+    MatExpansionModule,
+    MatChipsModule
+
+
 
 
   ],

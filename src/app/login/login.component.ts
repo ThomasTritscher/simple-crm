@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { RegisterComponent } from '../register/register.component';
 import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
@@ -10,17 +12,18 @@ export class LoginComponent implements OnInit {
 
 
   isSignedIn: boolean = false;
+  
 
-  constructor(public auth: AuthenticationService) { }
+
+  constructor(public auth: AuthenticationService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
 
-    if (localStorage.getItem('user') !== null) //check LS for user or not
+    if (sessionStorage.getItem('user') !== null) //check LS for user or not
       this.isSignedIn = true
     else
       this.isSignedIn = false
   }
-
 
   async onRegister(email: string, password: string) {
     await this.auth.register(email, password)
@@ -37,5 +40,11 @@ export class LoginComponent implements OnInit {
     this.isSignedIn = false
 
   }
+
+  openRegister() {
+    this.dialog.open(RegisterComponent);
+  }
+
+
 
 }

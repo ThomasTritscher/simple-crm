@@ -9,12 +9,15 @@ import { AuthenticationService } from '../services/authentication.service';
 export class RegisterComponent implements OnInit {
 
   isSignedIn: boolean = false;
+ 
 
   constructor(public auth: AuthenticationService) { }
 
   ngOnInit(): void {
-    
+
   }
+
+  
 
   async onRegister(email: string, password: string) {
     await this.auth.register(email, password)
