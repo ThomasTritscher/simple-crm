@@ -1,3 +1,9 @@
+@import 'src/styles/colors.scss';
+
+.overview {
+  width: 56vw;
+}
+
 .contract-stats {
   display        : flex;
   justify-content: space-between;
@@ -8,4 +14,13 @@
   display        : flex;
   justify-content: space-between;
   padding        : 8px;
+}
+
+app-side-nav-right {
+  position        : absolute;
+  right           : 0;
+  top             : 56px;
+  width           : 15vw;
+  height          : 100%;
+  background-color: $sideNavRight;
 }

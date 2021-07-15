@@ -1,3 +1,6 @@
+@import 'src/styles/colors.scss';
+
+
 .mat-drawer-container {
   height: 100vh;
 
@@ -5,7 +8,7 @@
   ul {
     list-style: none;
     padding   : 0;
-    margin: 0;
+    margin    : 0;
   }
 
   li {
@@ -15,18 +18,17 @@
     align-items: center;
     cursor     : pointer;
 
-    mat-icon{
+    mat-icon {
       margin-right: 16px;
     }
 
-    &:hover{
+    &:hover {
       color: rgba(0, 0, 0, 0.4);
     }
+
     &:focus {
       outline: none;
     }
-
-
 
   }
 }
@@ -36,7 +38,8 @@
 }
 
 .side-nav {
-  width: 300px;
+  background-color: $sideNavLeft;
+  width           : 200px;
 
 }
 
@@ -47,31 +50,72 @@
   display      : flex;
   align-items  : center;
 
-  span{
+  span {
     margin-left: 16px;
   }
 
-  img{
-    width: 40px;
+  img {
+    width : 40px;
     height: auto;
   }
 }
 
 mat-toolbar,
 mat-toolbar-row {
-  min-height: 56px;
-  height    : 56px;
+  background-color: $header;
+  min-height      : 56px;
+  height          : 56px;
+  border-bottom   : 1px solid $border;
 }
+
 .router-container {
-  padding-left: 56px;
-  padding-top: 16px;
+  padding-left : 56px;
+  padding-top  : 16px;
   padding-right: 56px;
 }
+
 .toolbar-row {
-  display: flex;
+  display        : flex;
   justify-content: space-between;
-  align-items: center;
+  align-items    : center;
+  color          : $text_icons;
 }
-.user-icon{
+
+.header-nav {
+  display    : flex;
+  align-items: center;
+
+  button {
+    margin: 0px 16px;
+  }
+
+
+
+
+}
+
+.header-icon-group {
+  mat-icon {
+    margin: 8px 8px;
+  }
+}
+
+.add-user-btn {
+  width           : 10rem;
+  height          : 28px;
+  border-radius   : 16px;
+  border          : 1px solid #BDBDBD;
+  background-color: #FF5722;
+  color           : #FFFFFF;
+}
+
+.login-btn {
+  width        : 6rem;
+  height       : 24px;
+  border-radius: 16px;
+  border       : 1px solid $border;
+}
+
+.user-icon {
   cursor: pointer;
-};
+}

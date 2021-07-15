@@ -18,14 +18,22 @@
       <mat-toolbar-row class="toolbar-row">
         <mat-icon class="menu-icon" mat-button (click)="drawer.toggle()">menu</mat-icon>
         <span>Simple CRM</span>
-        <div class="user-container">
-          Register
-          <mat-icon (click)="openRegister()" class="user-icon">how_to_reg</mat-icon>
+
+        <div class="header-nav">
+          <button class="add-user-btn" (click)="openRegister()" mat-button>
+            <mat-icon mat-mini-fab color="primary">add</mat-icon>
+            Add User
+          </button>
+          <div class="header-icon-group">
+            <mat-icon class="user-icon"> notifications_none</mat-icon>
+            <mat-icon class="user-icon">mail_outline</mat-icon>
+            <mat-icon class="user-icon">apps</mat-icon>
+          </div>
+          <button class="login-btn" (click)="openDialog()" mat-button>
+            Login
+          </button>
         </div>
-        <div class="user-container">
-          Login
-          <mat-icon (click)="openDialog()" class="user-icon">account_circle</mat-icon>
-        </div>
+
       </mat-toolbar-row>
     </mat-toolbar>
     <div class="router-container">

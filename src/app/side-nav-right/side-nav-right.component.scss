@@ -1,0 +1,40 @@
+@import 'src/styles/colors.scss';
+
+
+.right-nav {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+
+
+  h2 {
+    font-size     : 1rem;
+    letter-spacing: 2px;
+    margin        : 16px;
+  }
+}
+
+
+mat-list-item {
+
+  img {
+    background-color: $text;
+    width           : 32px;
+    height          : 32px;
+    border-radius   : 50%;
+    margin          : 8px;
+  }
+
+  span {
+    color      : $secondarytext;
+    font-size  : 0.85rem;
+    font-weight: 500;
+    padding    : 8px;
+  }
+
+  a {
+    text-decoration: none;
+    color          : $secondarytext;
+    padding    : 8px;
+  }
+}
