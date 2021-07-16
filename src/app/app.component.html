@@ -1,9 +1,6 @@
 <mat-drawer-container class="mat-drawer-container" autosize>
   <mat-drawer #drawer class="side-nav" [opened]="true" mode="side">
-    <div class="logo-container">
-      <img src="/assets/img/logo.png" alt="">
-      <span>Simple CRM</span>
-    </div>
+   <app-dashboard-user-view></app-dashboard-user-view>
     <ul>
       <li routerLink="/" routerLinkActive="router-link-active">
         <mat-icon>fact_check</mat-icon>Dashboard
@@ -29,11 +26,13 @@
             <mat-icon class="user-icon">mail_outline</mat-icon>
             <mat-icon class="user-icon">apps</mat-icon>
           </div>
-          <button class="login-btn" (click)="openDialog()" mat-button>
+          <button *ngIf="!auth.isLoggedIn" class="login-btn" (click)="openDialog()" mat-button>
             Login
           </button>
+          <button *ngIf="auth.isLoggedIn" class="login-btn" (click)="openDialog()" mat-button>
+            Logout
+          </button>
         </div>
-
       </mat-toolbar-row>
     </mat-toolbar>
     <div class="router-container">

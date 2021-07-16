@@ -17,8 +17,6 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  
-
   async onRegister(email: string, password: string) {
     await this.auth.register(email, password)
     if (this.auth.isLoggedIn)

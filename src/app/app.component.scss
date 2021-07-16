@@ -8,10 +8,11 @@
   ul {
     list-style: none;
     padding   : 0;
-    margin    : 0;
+    margin    : 32px 0 0 0;
   }
 
   li {
+    color      : $text;
     padding    : 0px 16px;
     height     : 48px;
     display    : flex;
@@ -43,23 +44,6 @@
 
 }
 
-.logo-container {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  padding      : 0px 16px;
-  min-height   : 56px;
-  display      : flex;
-  align-items  : center;
-
-  span {
-    margin-left: 16px;
-  }
-
-  img {
-    width : 40px;
-    height: auto;
-  }
-}
-
 mat-toolbar,
 mat-toolbar-row {
   background-color: $header;
@@ -89,9 +73,6 @@ mat-toolbar-row {
     margin: 0px 16px;
   }
 
-
-
-
 }
 
 .header-icon-group {
@@ -102,18 +83,18 @@ mat-toolbar-row {
 
 .add-user-btn {
   width           : 10rem;
-  height          : 28px;
   border-radius   : 16px;
   border          : 1px solid #BDBDBD;
   background-color: #FF5722;
   color           : #FFFFFF;
+  font-size: 12px;
 }
 
 .login-btn {
-  width        : 6rem;
-  height       : 24px;
+  width: 6rem;
   border-radius: 16px;
   border       : 1px solid $border;
+  font-size: 12px;
 }
 
 .user-icon {

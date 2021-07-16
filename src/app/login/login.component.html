@@ -11,16 +11,16 @@
             </mat-form-field>
             <mat-form-field class="example-full-width mb20">
                 <mat-label>
-                    <mat-icon>lock</mat-icon> Passwort
+                    <mat-icon>lock</mat-icon> Password
                 </mat-label>
                 <input #password type="password" name="password" matInput>
             </mat-form-field>
             <button type="submit" color="accent" mat-raised-button
-                (click)="onSignin(email.value,password.value)">Anmelden</button>
-            <button mat-button color="Basic">Password vergessen</button>
+                (click)="onSignin(email.value,password.value)">Login</button>
+            <button mat-button color="Basic">Forgot Password?</button>
             <span class="registerLink">
-                <p class="mr10">noch kein Mitglied ?</p>
-                <a (click)="openRegister()" class="ml10"> Registriere Dich</a>
+                <p class="mr10">You have to register?</p>
+                <a (click)="openRegister()" class="ml10"> Register</a>
             </span>
         </form>
     </div>

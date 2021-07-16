@@ -42,6 +42,7 @@ import { ContractsComponent } from './contracts/contracts.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatChipsModule } from '@angular/material/chips';
 import { SideNavRightComponent } from './side-nav-right/side-nav-right.component';
+import { DashboardUserViewComponent } from './dashboard-user-view/dashboard-user-view.component';
 
 
 
@@ -64,6 +65,7 @@ import { SideNavRightComponent } from './side-nav-right/side-nav-right.component
     CashFlowComponent,
     ContractsComponent,
     SideNavRightComponent,
+    DashboardUserViewComponent,
  
 
 

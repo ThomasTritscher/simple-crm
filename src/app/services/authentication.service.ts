@@ -7,7 +7,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class AuthenticationService {
 
-
   isLoggedIn: boolean = false;
 
   constructor(public firebaseAuth: AngularFireAuth) { }
@@ -27,8 +26,9 @@ export class AuthenticationService {
       })
   }
   logout() {
-    this.firebaseAuth.signOut()
-    sessionStorage.removeItem('user')
+    this.firebaseAuth.signOut();
+    sessionStorage.removeItem('user');
+    this.isLoggedIn = false;
   }
 
 }

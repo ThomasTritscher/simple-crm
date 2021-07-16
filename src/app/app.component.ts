@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AuthenticationService } from './services/authentication.service';
 import { GetUserDataService } from './services/get-user-data.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { GetUserDataService } from './services/get-user-data.service';
 })
 export class AppComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, public auth: AuthenticationService) { }
   title = 'simple-crm';
 
  
@@ -19,9 +20,7 @@ export class AppComponent implements OnInit {
    
   }
 
-  
 
- 
   openDialog() {
     this.dialog.open(LoginComponent);
   }
